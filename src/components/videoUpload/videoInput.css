@@ -1,0 +1,33 @@
+
+.VideoInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    width: 95%;
+  }
+  
+  .VideoInput_input {
+    display: none;
+    margin-top: 12px;
+  }
+  
+  .VideoInput_video {
+    display: block;
+    margin-top: 12px;
+    margin: 0;
+  }
+  
+  .VideoInput_footer {
+    background: #eee;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    margin-top: 12px;
+    min-height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:grey;
+  }
+  

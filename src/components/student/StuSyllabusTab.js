@@ -6,32 +6,33 @@ import Session from "../../assets/session.svg";
 import attach from "../../assets/attachmnt.svg";
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Mycalendar from "../calendar/Mycalendar";
+import moment from "moment";
 
 export default class StuSyllabusTab extends Component {
+  
   render() {
+   
+    let dt = moment();
+    
     return (
-	<div style={{textAlign: "left", marginTop: '12px'}} >
-    <span id="hd-colg-name">Welcome to Machine Learning</span>
-    <hr/>
-    <div className="row">
-    <div className="col" style={{textAlign: "left", marginTop: '8px'}}>
-<span id="ass-title"> Lead Instructor Name  </span><br/>
-<span id="ins-text">Mr. Avinash Sri</span><br/>
-<span id="ass-title">  Professor Name  </span><br/>
-<span id="ins-text">Mr. Avinash Sri</span><br/>
-<span id="ins-text" >Mr. Avinash Sri</span><br/>
-    </div>
-    <div className="col">
-      <div>
-        <Image src={attach} alt="attachment" width='30' />
-    <Link to="/files/videolist.json" target="_blank" download>Handouts</Link>
-
+      <div style={{ textAlign: "left", marginTop: "12px" }}>
+      <div className="row">
+        <div className="col">
+          <span id="hd-colg-name">Current Time {dt.format("hh:mm a") }</span>
         </div>
+      
+        
+      </div>
+
+    
+      <div className="row">
+     
+     <Mycalendar/>
+      </div>
     </div>
-	
-</div>
-</div>
-	
-	  );
+   
+        
+    );
   }
 }

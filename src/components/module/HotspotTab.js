@@ -14,84 +14,40 @@ export default class HotspotTab extends Component {
     super(props); //since we are extending class Table so we have to use super in order to override Component class constructor
     this.state = {
       //state is by default an object
-      hostspotvideos: [
-        {
-          Session1: [
-            {
-              Hostpot1: [
+      
+              hostspotvideos: [
                 {
                   id: 1,
                   url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
+                  title: "Introduction",
                   runtime: "5.0",
-                  duration: 4,
+                  duration: "5.7 min",
                 },
                 {
                   id: 2,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
+                  url: "https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg",
+                  title: "Magnets & Lights ",
                   runtime: "5.0",
-                  duration: 4,
+                  duration: "6.1 min",
+                },
+                {
+                  id: 3,
+                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
+                  title: "Reflections",
+                  runtime: "5.0",
+                  duration: "2.7 min",
+                },
+                {
+                  id: 4,
+                  url: "https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg",
+                  title: "Forces",
+                  runtime: "5.0",
+                  duration: "5.1 min",
                 },
               ],
-              Hostpot2: [
-                {
-                  id: 1,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
-                  runtime: "5.0",
-                  duration: 4,
-                },
-                {
-                  id: 2,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
-                  runtime: "5.0",
-                  duration: 4,
-                },
-              ],
-            },
-          ],
-        },
-        {
-          Session2: [
-            {
-              Hostpot1: [
-                {
-                  id: 1,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
-                  runtime: "5.0",
-                  duration: 4,
-                },
-                {
-                  id: 2,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
-                  runtime: "5.0",
-                  duration: 4,
-                },
-              ],
-              Hostpot2: [
-                {
-                  id: 1,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
-                  runtime: "5.0",
-                  duration: 4,
-                },
-                {
-                  id: 2,
-                  url: "https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg",
-                  title: "500 mg",
-                  runtime: "5.0",
-                  duration: 4,
-                },
-              ],
-            },
-          ],
-        },
-      ],
+             
+         
+        
     };
   }
 
@@ -126,25 +82,29 @@ export default class HotspotTab extends Component {
             </td>
             <td style={{ verticalAlign: "top", width: "806px" }}>
               <div style={{ width: "606px", marginLeft: "12px" }}>
-                <span id="mod-title">chapter 1</span>
+                <span id="mod-title">chapter {id}</span>
                 <br />
-                <span id="stu-name">{runtime}</span>
+                <span id="stu-name">{title}</span>
                 <br />
                 <span id="cc-lbl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
                   ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
                   dolor sit amet, consectetur adipiscing elitsasa.
                 </span>
-                <div style={{textAlign: "right"}}>
-                <Image width={30} height={30} src={share} alt="Card image cap" />
-                </div>
+                <div id="stu-div" style={{ width: "130px" }}>
+                {" "}
+                <span id="stu-name"style={{ color: "red" }}>{duration}</span>
+                
+              </div>
               </div>
             </td>
 
             <td>
-              <div id="stu-div" style={{ width: "140px" }}>
-                {" "}
-                <span id="stu-name">{duration}</span>
+              <div id="stu-div" style={{ width: "130px" }}>
+               
+                <div style={{textAlign: "right"}}>
+                <Image width={30} height={30} src={share} alt="Card image cap" />
+                </div>
               </div>
             </td>
           </tr>
@@ -156,6 +116,12 @@ export default class HotspotTab extends Component {
   render() {
     return (
       <div className="row" id="ses-div">
+          <div className="row">
+        <div className="col">
+          <span id="hd-colg-name">Pre watched Content</span>
+        </div>
+        <hr />
+      </div>
         <div className="row" >
           <div className="col-sm-3">
             <div style={{ margin: "15px", width: "180px" }}>
@@ -191,7 +157,7 @@ export default class HotspotTab extends Component {
                 <br />
                 <p id="dash-lbl" style={{ marginTop: "18px" }}>
                   {" "}
-                  <u>2 Sessions</u>{" "}
+                  <u>4 Sessions</u>{" "}
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <div
                     id="add-ses"

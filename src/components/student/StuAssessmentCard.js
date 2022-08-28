@@ -87,8 +87,12 @@ export default class StuAssessmentCard extends Component {
               </div>
               <br />
               <div style={{ textAlign: "left",marginTop: '-16px' }}>
-              <span id="cc-lbl">Your Points : </span><span id="#stu-name">{marks}/10</span></div>
-            </div>
+              <span id="cc-lbl">Your Points : </span><span id="#stu-name">
+              { status.match(0) ? 
+                 <span id="#stu-name">{marks}/10</span> : "--"}
+               </span>
+               
+            </div></div>
           </CardBody>
           <div className="row">
             <div className="col">
@@ -101,7 +105,7 @@ export default class StuAssessmentCard extends Component {
                 <span id="cc-lbl">&nbsp;&nbsp;Due Date&nbsp;:&nbsp;</span>
                 <span
                   id="cc-lbl"
-                  style={{ color: status.match(/open/i) ? "green" : "orange" }}
+                  style={{ color: status.match(0) ? "green" : "orange" }}
                 >
                   {this.getFormattedDate(due_date)}&nbsp;
                 </span>
@@ -115,13 +119,15 @@ export default class StuAssessmentCard extends Component {
               <div
                 id="div-overlay"
                 style={{
+
+               color: status.match(0) ? "green" : "orange" ,
                   marginBottom: "15px",
                   marginRight: "10px",
                 }}
               >
-                <div id="elevn-white" style={{textAlign: 'center'}}>
-               { type.match(/quiz/i) ? 
-                  "TAKE TEST" : "UPLOAD ASSIGNMENT"}</div>
+                <div id="elevn-white" style={{textAlign: 'center'}} >
+               { status.match(1) ? 
+                  "TAKE TEST" : "Test Taken!!"}</div>
               </div>
             </div>
           </div>

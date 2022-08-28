@@ -3,7 +3,7 @@ import { Container } from "@material-ui/core";
 import Image from "react-bootstrap/Image";
 import "./../College.css";
 // import quiz from "../../assets/courses.jpg";
-// import assgn from "../../assets/Assignment_grey.svg";
+// import assgn from "../../assets/Quiz_grey.svg";
 // import qz from "../../assets/bell.svg";
 import StuAssessmentCard from "./StuAssessmentCard";
 
@@ -19,7 +19,7 @@ export default class StuAssessmentsTab extends Component {
           id: 1,
           title: "Pythagorus Theorem",
           type: "Quiz 1",
-          due_date: "21/02/2020",
+          due_date: "21/02/2022",
           status: "0",
           marks: "10",
           description:
@@ -28,8 +28,8 @@ export default class StuAssessmentsTab extends Component {
         {
           id: 2,
           title: "Pythagorus Theorem",
-          type: "Assignment 2",
-          due_date: "21/04/2020",
+          type: "Quiz 2",
+          due_date: "21/04/2022",
           status: "1",
           marks: "10",
           description:
@@ -38,8 +38,8 @@ export default class StuAssessmentsTab extends Component {
         {
           id: 3,
           title: "Pythagorus Theorem",
-          type: "Assignment 3",
-          due_date: "21/03/2020",
+          type: "Quiz 3",
+          due_date: "21/03/2022",
           status: "1",
           marks: "10",
           description:
@@ -48,8 +48,8 @@ export default class StuAssessmentsTab extends Component {
         {
           id: 4,
           title: "Pythagorus Theorem",
-          type: "Assignment 4",
-          due_date: "24/04/2020",
+          type: "Quiz 4",
+          due_date: "24/04/2022",
           status: "0",
           marks: "4",
           description:
@@ -59,7 +59,7 @@ export default class StuAssessmentsTab extends Component {
           id: 5,
           title: "Pythagorus Theorem",
           type: "Quiz ",
-          due_date: "25/05/2020",
+          due_date: "25/05/2022",
           status: "0",
           marks: "5",
           description:
@@ -68,8 +68,8 @@ export default class StuAssessmentsTab extends Component {
         {
           id: 6,
           title: "Pythagorus Theorem",
-          type: "Assignment 6",
-          due_date: "26/06/2020",
+          type: "Quiz 6",
+          due_date: "26/06/2022",
           status: "1",
           marks: "6",
           description:

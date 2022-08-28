@@ -3,6 +3,7 @@ import qz from "../../assets/bell.svg";
 import React, { Component, useState } from "react";
 import Image from "react-bootstrap/Image";
 import "./../College.css";
+import share from "../../assets/share.svg"
 
 import add_assgn from "../../assets/add_assignmnt.svg";
 import add_qz from "../../assets/add_quiz.svg";
@@ -22,7 +23,7 @@ export default class AssessmentsTab extends Component {
         {
           id: 1,
           title: "Pythagorus Theorem",
-          type: "Assignment 1",
+          type: "Quiz 1",
           due_date: "21/02/2020",
           status: "open",
           marks: "10",
@@ -38,7 +39,7 @@ export default class AssessmentsTab extends Component {
         {
           id: 3,
           title: "Sigmoid Theorem",
-          type: "Assignment 2",
+          type: "Quiz 2",
           due_date: "21/02/2020",
           status: "open",
           marks: "10",
@@ -54,7 +55,7 @@ export default class AssessmentsTab extends Component {
         {
           id: 5,
           title: "Pythagorus Theorem",
-          type: "Assignment 3",
+          type: "Quiz 3",
           due_date: "21/02/2020",
           status: "open",
           marks: "10",
@@ -87,7 +88,7 @@ toggleModal = () => {
             <td style={{ verticalAlign: "top", width: "806px" }}>
               <div style={{ width: "606px", marginLeft: "12px" }}>
                 <span id="ass-title">
-                  {type.match(/quiz/i) ? "Quiz" : "Assignment"}
+                  {type.match(/quiz/i) ? "Quiz" : "Quiz"}
                 </span>
                 <br />
                 <span id="stu-name">{title}</span>
@@ -111,8 +112,14 @@ toggleModal = () => {
                 {" "}
               </div>
             </td>
+            <td>
+            <Image width={30} height={30} src={share} alt="Card image cap" />
+            </td>
           </tr>
           <br />
+          <div style={{marginLeft: "15px"}}>
+               
+                </div>
         </div>
       );
     });
@@ -124,26 +131,26 @@ show: true,
     const show = false;
     return (
       <div>
+          <div className="row">
+        <div className="col">
+          <span id="hd-colg-name">Quiz </span>
+        </div>
+        <hr />
+      </div>
         <div className="row">
           <div className="col"></div>
           <div className="col"></div>
           <div className="col">
-            <div style={{ textAlign: "left", marginLeft: '70px' }}>
+            <div style={{ textAlign:"right", marginRight:"33em" }}>
               
-              <Image
-                src={add_qz}
-                alt="add_qz"
-                onClick={this.toggleModal}
-                style={{ width: 50, height: 50, padding: "5px" }}
-              />
-              <AddAssignmentModal show={this.state.isOpen} onClose={this.toggleModal}></AddAssignmentModal>
+    
 
               &nbsp;
               <Image
                 src={add_assgn}
                 alt="add_assgn"
                 onClick={this.toggleModal}
-                style={{ width: 50, height: 50, padding: "5px" }}
+                style={{ width: 50, height: 50, padding: "5px"}}
               />
               <AddAssignmentModal show={this.state.isOpen} onClose={this.toggleModal}></AddAssignmentModal>
             </div>

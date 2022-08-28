@@ -6,7 +6,9 @@
     height: 35rem;
     margin-bottom: 3rem;
 }
-
+.Link.green-color {
+    text-decoration: none;
+}
 .topInfo {
     display: flex;
     flex-flow: column wrap;

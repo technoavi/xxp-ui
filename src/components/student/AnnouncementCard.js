@@ -4,7 +4,7 @@ import { Card, CardBody, Button } from "reactstrap";
 import ai from "../../assets/ai.jpg";
 import pin from "../../assets/pin.png";
 import Image from "react-bootstrap/Image";
-
+import DownloadLink from "react-download-link";
 
 class AnnouncementCard extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class AnnouncementCard extends Component {
       description,
     } = this.props.person;
     return (
-      <div style={{ width: "290px", marginLeft: "8px", marginRight: "8px" }}>
+      <div style={{ width: "300px", marginLeft: "8px", marginRight: "8px" }}>
         <Card style={{ width: "290px", height: "290px" }}>
         <div className="row">
     <div className="col-2">
@@ -37,25 +37,19 @@ class AnnouncementCard extends Component {
                 marginLeft: "10px",
               }}
             />
+         
     </div>
     <div className="col-7">
     
-  <div  style={{ textAlign: 'left', marginTop: "15px",  marginLeft: "15px",wordBreak:'break-word'}}>
+  <div  style={{ textAlign: 'right', marginTop: "-2em",  marginRight: "5px",wordBreak:'break-word'}}>
   <span id="ins-card-lb1">{title}</span>
+  
   </div>
     </div>
-	 <div className="col">
-
-     <Image
-                    src={pin}
-                    alt="pin"
-                    style={{ height: "35px", width: "35px", padding: "2PX",
-                    marginTop: "2px",  marginLeft: "13px", }}
-                  />
-    </div>
+	 
 </div>
           <CardBody style={{
-                padding: "10px",
+                padding: "10px",marginTop: "2em"
               }}>
             <div>
             
@@ -65,10 +59,18 @@ class AnnouncementCard extends Component {
               id="trunc-txt"
               
             >
-              <span>{description}</span>
+              {/* <span>{description}</span> */}
               <br />
             </div>
-              <span id="ins-card-lb2" style={{color: 'darkblue'}}>{faculty}</span>
+            <a  href={faculty} download>
+              <span id="ins-card-lb2" style={{color: 'darkblue'}}>Download Report</span>
+              </a>
+              <Image
+                    src={pin}
+                    alt="pin"
+                    style={{ height: "35px", width: "35px", padding: "2PX", textAlign: 'right',
+                    marginTop: "2px" }}
+                  />
               <br />
             </div>
 

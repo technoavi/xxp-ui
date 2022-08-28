@@ -83,12 +83,12 @@ export default class ModuleTab extends Component {
      <div style={{backgroundColor: 'white',textAlign: 'left', marginLeft: '125px'}}>
     <Tabs activeTab='session'>
       <TabList>
-      <Tab component={CustomTab} label='Syllabus' id='syllabus' />
-        <Tab component={CustomTab} label='Session' id='session' />
-        <Tab component={CustomTab} label='Add Session' id='hotspot' />
-        <Tab component={CustomTab} label='Assesments' id='assessment' />
-        <Tab component={CustomTab} label='Attachments' id='attachment' />
-        <Tab component={CustomTab} label='Announcement' id='announcement' />
+      <Tab component={CustomTab} label='Calendar ' id='syllabus' />
+        <Tab component={CustomTab} label='PreWatch Content' id='session' />
+        <Tab component={CustomTab} label='Add Video' id='hotspot' />
+        <Tab component={CustomTab} label='Quiz' id='assessment' />
+        <Tab component={CustomTab} label='PreRead' id='attachment' />
+        <Tab component={CustomTab} label='Reports' id='announcement' />
 
       </TabList>
       <TabList>

@@ -91,22 +91,22 @@ export default class StuModuleTab extends Component {
         >
           <Tabs activeTab="stusession">
             <TabList>
-              <Tab component={CustomTab} label="Syllabus" id="stusyllabus" />
-              <Tab component={CustomTab} label="Sessions" id="stusession" />
+              <Tab component={CustomTab} label="Calendar" id="stusyllabus" />
+              <Tab component={CustomTab} label="PreWatch" id="stusession" />
               {/* <Tab component={CustomTab} label="Session" id="stuhotspot" /> */}
               <Tab
                 component={CustomTab}
-                label="Assesments"
+                label="Quiz"
                 id="stuassessment"
               />
               <Tab
                 component={CustomTab}
-                label="Attachments"
+                label="PreRead Content"
                 id="stuattachment"
               />
               <Tab
                 component={CustomTab}
-                label="Announcement"
+                label="Class Notes"
                 id="stuannouncement"
               />
             </TabList>

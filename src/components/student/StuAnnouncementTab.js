@@ -16,16 +16,16 @@ export default class StuAnnouncementsTab extends Component {
           faculty: "Kuldeep Chavada",
           title: "Quiz Extended",
           department: "Computer Science",
-          date:"6/12/2020",
+          date:"6/12/2022",
           description: "He has experience of more 20 years in Biotechnology & Micro cell technology. Avinash SrivastavHe has experience of more 20 years in Biotechnology & Micro cell technology.Avinash Srivastava"
-        
+      
         },
         {
           id: 2,
           faculty: "Jay D Vala ",
           title: "Responsiveness UI Pending",
           department: "Bootstrap UI",
-          date:"6/12/2020",
+          date:"6/12/2022",
           description: "He has experience of more 20 years in Biotechnology & Micro cell technology."
         
         },
@@ -34,7 +34,7 @@ export default class StuAnnouncementsTab extends Component {
           faculty: "Martin harrison",
           title: "Logo Pending",
           department: "UX Designing",
-          date:"6/12/2020",
+          date:"6/12/2022",
           description: "He has experience of more 20 years in Biotechnology & Micro cell technology. Avinash SrivastavHe has experience of more 20 years in Biotechnology & Micro cell technology.Avinash Srivastava"
         
         },
@@ -43,7 +43,7 @@ export default class StuAnnouncementsTab extends Component {
           faculty: "Prasad K",
           title: "Cricket club launched",
           department: "Cricket Academy",
-          date:"6/12/2020",
+          date:"6/12/2022",
           description: "He has experience of more 20 years in Biotechnology & Micro cell technology. Avinash SrivastavHe has experience of more 20 years in Biotechnology & Micro cell technology.Avinash Srivastava"
         
         },
@@ -52,7 +52,7 @@ export default class StuAnnouncementsTab extends Component {
           faculty: "Avinash Srivastava",
           title: "Qurio is launching soon",
           department: "AI and Product",
-          date:"6/12/2020",
+          date:"6/12/2022",
           description: "He has experience of more 20 years in Biotechnology & Micro cell technology. Avinash SrivastavHe has experience of more 20 years in Biotechnology & Micro cell technology.Avinash Srivastava"
         
         }

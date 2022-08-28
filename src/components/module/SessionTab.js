@@ -6,11 +6,20 @@ import ai from "../../assets/courses.jpg";
 import play from "../../assets/play.svg"
 import share from "../../assets/share.svg"
 import addsess from "../../assets/add_session.svg"
+import AlertMassage from "../AlertMessage";
 
 export default class SessionTab extends Component {
   constructor(props) {
     super(props); //since we are extending class Table so we have to use super in order to override Component class constructor
     this.state = {
+      clickBtn:"",
+      sts:false,
+      clickBtn:{
+        msg: "",
+        key:''
+
+      },
+      
       //state is by default an object
       students: [
         {
@@ -53,11 +62,27 @@ export default class SessionTab extends Component {
           department: "CSE",
           course_enrolled: "9.00",
         },
+    
       ],
     };
+    this.imageClick = this.imageClick.bind(this);
   }
+  imageClick = () => {
+  //  console.log(this.state.clickBtn.msg+"Published", this.clickBtn.key )
+//alert(this.state.sts)
+this.setState({
+ sts: !this.state.sts,
+  clickBtn: {msg: "Published", key: Math.random()}
+  
+})
 
+  } 
+  
+
+  
+  
   renderTableData() {
+    
     return this.state.students.map((student, index) => {
       const {
         id,
@@ -67,7 +92,9 @@ export default class SessionTab extends Component {
         department,
         course_enrolled,
       } = student; 
+      const msg="Published"
       return (
+
         <div>
           <tr key={id}>
             <td>
@@ -96,8 +123,12 @@ export default class SessionTab extends Component {
               <div id="stu-div" style={{ width: "140px" }}>
                 {" "}
                 <span id="stu-name">{course_enrolled}</span>
+             
                 <div style={{marginLeft: "15px"}}>
-                <Image width={30} height={30} src={share} alt="Card image cap" />
+                <Image width={30} height={30} src={share} alt="Card image cap" onClick={this.imageClick}/>
+                
+        
+                {this.state.sts ? <AlertMassage key={id} message={msg} /> : null}
                 </div>
                
               </div>
@@ -109,10 +140,17 @@ export default class SessionTab extends Component {
     });
   }
   render() {
+   
     return (
       <div className="row" id="ses-div">
+         <div className="row">
+        <div className="col">
+          <span id="hd-colg-name">Pre watched Content</span>
+        </div>
+        <hr />
+      </div>
         <div className="row">
-        
+       
           <div className="col-3">
             <div style={{ margin: "15px", width: "180px" }}>
               <Image width={438} height={105} src={ai} alt="Card image cap" />

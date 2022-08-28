@@ -14,7 +14,7 @@ export const Course = () => {
   return (
     <section className="blog">
       <div className="blogWrapper">
-        <div className="topInfo">
+        <div className="topInfo" style={{marginTop:"5em"}}>
           <h2>Welcome to Qurio Class</h2>
           <h3>Where teaching and learning come together</h3>
           <p>
@@ -26,7 +26,7 @@ export const Course = () => {
             <div className="postBtn">
             <button className="left">←</button>
             </div>
-            
+            <Link to="/md" style={{ textDecoration: 'none'}} className="green-color">  
           <PostCourse
             src={BlogPic1}
             alt="alimento1"
@@ -35,7 +35,7 @@ export const Course = () => {
             name="fabio"
             author="KuldeepSinh Chavda"
           />
-
+</Link>
           <PostCourse
             src={BlogPic2}
             alt="alimento2"
@@ -44,7 +44,7 @@ export const Course = () => {
             name="Rapha Gama"
             author="KuldeepSinh Chavda"
           />
-<Link to="/md" style={{ color: 'red'}} >
+<Link to="/af" style={{ color: 'red'}} >
           <PostCourse
             src={BlogPic3}
             alt="alimento3"
